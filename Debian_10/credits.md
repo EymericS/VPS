@@ -1,13 +1,10 @@
-> Debian server install :
-https://olange.developpez.com/articles/debian/installation-serveur-dedie/?page=installation-de-base
-and
-https://www.idneo.fr/administration-serveur/configuration-serveur-dedie-vps-ovh-ubuntu/
+# Some usefull link I used to
 
-> Ubuntu doc :
-https://doc.ubuntu-fr.org/mariadb
-https://doc.ubuntu-fr.org/mysql
+## Debian server install :
+* [developpez.com/installation-serveur-debian](https://olange.developpez.com/articles/debian/installation-serveur-dedie/)
+* [idneo.fr//installation-serveur-debian](https://www.idneo.fr/administration-serveur/configuration-serveur-dedie-vps-ovh-ubuntu/)
 
-https://doc.ubuntu-fr.org/phpmyadmin
-
-http://github.com - automatic!
-[GitHub](http://github.com)
+## Ubuntu doc :
+* [mariadb](https://doc.ubuntu-fr.org/mariadb)
+* [mysql](https://doc.ubuntu-fr.org/mysql)
+* [phpmyadmin](https://doc.ubuntu-fr.org/phpmyadmin)
