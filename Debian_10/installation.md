@@ -45,6 +45,7 @@
 ## Mail server :
 `~$ sudo apt-get install postfix postfix-mysql` no config choice
 
+## TODO List :
 - [x] Change pwd
 - [x] Install HTTP **(apache2)**
 - [ ] Delete /apache2-default/ redirection
