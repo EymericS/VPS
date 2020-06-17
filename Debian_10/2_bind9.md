@@ -11,7 +11,8 @@ As a DNS server, tranlate from IP to Domain and vice versa.
 
 * zone declaration :
   * at `/etc/bind/named.conf.local`
-  * ````
+  * 
+  ````
     zone "domain.name" {
       type master;
       file "/etc/bind/db.domain.name";
@@ -40,6 +41,5 @@ As a DNS server, tranlate from IP to Domain and vice versa.
   sql        IN    A           xxx.xxx.xxx.xxx
   mysql        IN    A           xxx.xxx.xxx.xxx
 ````
-  
-  
-  
+
+> DNS config test : [DNS Stuff](https://www.dnsstuff.com/) ou [afnic](https://www.zonemaster.net/domain_check)
