@@ -19,7 +19,7 @@ As a DNS server, tranlate from IP to Domain and vice versa.
     };
   ````
   * create zone description file : **/etc/bind/db.domain/name** and file with ( for exemple ) : 
-  ````
+````
   $ttl 86400
   domain.name.       IN      SOA     ksXXXXX.kimsufi.com. webmaster.domain.name. (
                                       2006121903
