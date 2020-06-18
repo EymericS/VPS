@@ -16,3 +16,10 @@
 
 ## Misc :
 * [regex tools](https://regexr.com/)
+
+## Links for TODO :
+* [some VHost config options](https://www.installerunserveur.com/creer-des-virtualhost)
+* [ssl configuration exemple (OpenClassRoom)](https://openclassrooms.com/forum/sujet/apache-virtual-host-ssl-et-sous-domaines)
+* [ssl configuration exemple (StackExchange)](https://serverfault.com/questions/744960/configuring-ssl-with-virtual-hosts-under-apache-and-centos)
+* [ssl tuto (DigitalOcean)](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7)
+* [VHost and SubDomain](https://angezanetti.com/ajouter-un-sous-domaine-serveur-dedie-apache2-configuration/)
