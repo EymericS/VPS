@@ -16,6 +16,9 @@
 
 ## Misc :
 * [regex tools](https://regexr.com/)
+* [apache2 options doc](https://httpd.apache.org/docs/2.2/mod/core.html#options)
+* [bash command line shortcut](http://teohm.com/blog/shortcuts-to-move-faster-in-bash-command-line/)
+* [unix permission](https://kb.iu.edu/d/abdb)
 
 ## Links for TODO :
 * [some VHost config options](https://www.installerunserveur.com/creer-des-virtualhost)
