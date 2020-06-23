@@ -46,20 +46,53 @@
   
   ### Website VHost
   
-  * 
+  * create directory : `~$ sudo mkdir /var/log/apache2/exemple.tld'
+  * create file : `~$ sudo touch /etc/apache2/sites-available/exemple.tld.conf'
+``
+  <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName www.exemple.tld
+        ServerAlias exemple.com
+        DocumentRoot /var/www/exemple.tld/
+		
+        <Directory /var/www/exemple.tld/>
+                AllowOverride all         # permitte the use of .htaccess
+                Require all granted       # allow all visitor
+                Options -Indexes -Includes -ExecCGI +FollowSymlinks
+                    # -Indexes (disable): open as file manager if no idex found
+                    # -Inlcudes (disable): allow inclusion
+                    # -ExecCGI (disable): allow CGI script
+                    # +FllowSymlinks (enable): if a dir is a symbol link, follow the link ( enable URL rewrite )
+        </Directory>
 
+        ErrorLog /var/log/apache2/exemple.tld/error.log
+        CustomLog /var/log/apache2/exemple.tld/access.log combined
+
+        LogLevel warn        # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
+
+</VirtualHost>
+``
+	* enable new config : `~$ sudo a2ensite exemple.tld`
+	* reload apache2 : `~$ sudo systemctl reload apache2`
+	
+## HTTPS with TLS(SSL) and Certbot
+### TLS
+	* Enable TLS mod on apache2 : `~$ sudo a2enmod ssl`
+	* Make change effective : `~$ sudo systemctl restart apache2`
+### Certbot
+	* Install : `~$ sudo apt-get install certbot python-certbot-apache`
+	* Generate certificate : `~$ sudo certbot --apache` ( better secure to enable force https redirection )
+	* List existing certificate : `~$ sudo certbot certificates`
+		* to add many domain on one certif add them in same line : `www.domain.tld domain.tld`
+		* or : `~$ certbot --expand -d existing.com -d example.com -d newdomain.com`
+	* Renew certificate : `~$ sudo certbot renew`
+	* Delete certificate :
+		* Disable : `~$ sudo a2dissite exemple.tld-le-ssl
+		* Revoke : `~$ sudo certbot revoke --cert-path /etc/letsencrypt/live/CERTNAME/fullchain.pem`
+		* Delete : `~$ sudo certbot delete --cert-name example.tld`
+	
+	
 ## OTHER
-
-`/etc/apache2/sites-available`
-`/etc/apache2/sites-enabled`
-
-
-  * indicate default index type file : `DirectoryIndex index.html index.php index.xhtml` *(around line 200)*
+	* indicate default index type file : `DirectoryIndex index.html index.php index.xhtml` *(around line 200)*
   
   ## Apache2 mods
-  
-  
-  
-  
-  
-  
