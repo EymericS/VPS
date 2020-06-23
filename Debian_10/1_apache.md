@@ -44,10 +44,10 @@
   
   > By default php file interpretation are disable : comment the right line in `/etc/apache2/mods-available/php7.x.conf`
   
-  ### Website VHost
-  
-  * create directory : `~$ sudo mkdir /var/log/apache2/exemple.tld'
-  * create file : `~$ sudo touch /etc/apache2/sites-available/exemple.tld.conf'
+### Website VHost
+
+* create directory : `~$ sudo mkdir /var/log/apache2/exemple.tld`
+* create file : `~$ sudo touch /etc/apache2/sites-available/exemple.tld.conf`
 ``
   <VirtualHost *:80>
         ServerAdmin webmaster@localhost
@@ -72,16 +72,20 @@
 
 </VirtualHost>
 ``
-	* enable new config : `~$ sudo a2ensite exemple.tld`
-	* reload apache2 : `~$ sudo systemctl reload apache2`
+* enable new config : `~$ sudo a2ensite exemple.tld`
+* reload apache2 : `~$ sudo systemctl reload apache2`
 	
 ## HTTPS with TLS(SSL) and Certbot
+
 ### TLS
-	* Enable TLS mod on apache2 : `~$ sudo a2enmod ssl`
-	* Make change effective : `~$ sudo systemctl restart apache2`
+
+* Enable TLS mod on apache2 : `~$ sudo a2enmod ssl`
+* Make change effective : `~$ sudo systemctl restart apache2`
+
 ### Certbot
-	* Install : `~$ sudo apt-get install certbot python-certbot-apache`
-	* Generate certificate : `~$ sudo certbot --apache` ( better secure to enable force https redirection )
+
+* Install : `~$ sudo apt-get install certbot python-certbot-apache`
+* Generate certificate : `~$ sudo certbot --apache` ( better secure to enable force https redirection )
 	* List existing certificate : `~$ sudo certbot certificates`
 		* to add many domain on one certif add them in same line : `www.domain.tld domain.tld`
 		* or : `~$ certbot --expand -d existing.com -d example.com -d newdomain.com`
@@ -91,8 +95,7 @@
 		* Revoke : `~$ sudo certbot revoke --cert-path /etc/letsencrypt/live/CERTNAME/fullchain.pem`
 		* Delete : `~$ sudo certbot delete --cert-name example.tld`
 	
-	
 ## OTHER
-	* indicate default index type file : `DirectoryIndex index.html index.php index.xhtml` *(around line 200)*
+* indicate default index type file : `DirectoryIndex index.html index.php index.xhtml` *(around line 200)*
   
-  ## Apache2 mods
+## Apache2 mods
