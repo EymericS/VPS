@@ -62,3 +62,8 @@ collectionOperation={
 		"security"="is_granted('IS_AUTHENTICATED_FULLY')",
 		"controller"=App\Controller\Api\CommentCreateController::class
 ```
+
+# TODO
+[x] install
+[ ] normalization ?
+[ ] denormalization ?
