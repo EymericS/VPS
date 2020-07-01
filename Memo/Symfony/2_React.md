@@ -90,5 +90,47 @@ export function usePaginatedFetch (url) {
     load,
     loading
   }
+ ```   
+ 
+ ## Form
+ 
+ ```JS 
+ constructor (props) {
+  super(proprs)
+  ...
+  this.handleChange = this.handleChange.bind(this
+ 
+ 
+ handleChange (e) {
+  this.setState( {
+   nom: e.target.value
+  })
+ 
+ /* React controlled field */
+ <input type="text" id="nom" name="nom" value={this.state.nom} onChange={this.handleChange}/>
+ /* React not controlled field */
+ <input type="text" id="" name="" defaultValue="{this.state.nom}" onChange={this.handleChange}/>
+ ```
+ 
+ ## Form error type
+ 
+ Around [58 min](https://www.youtube.com/watch?v=8T8oN-now9Y&t=58m00s)
     
-    
+# TODO / Search
+
+- [x] react *hooks*
+- [x] react **hooks** : `useState()`
+- [ ] react **hooks** : `useEffect()`
+- [ ] react **hooks** : `useRef()`
+- [ ] **react** : `React.forwardRef()`
+- [ ] **react** : `componetDidMount()`
+- [ ] **react** : `componetWillUnmount()`
+- [ ] **react** : pure component `React.memo` `extends React.PureComponent`
+- [ ] react **hooks** : `useCallBack()` & `async`
+- [ ] `avait fetch()`
+- [ ] react custom component for relative time ( post )
+- [ ] React.memo ( avoid too much reload on unchanged )
+- [ ] context lose `this.someMethode.bind(this)`
+- [ ] html `class=""` -> react `className=""`
+- [ ] html `for=""` -> react `htmlFor=""`
+- [ ] **react** *devTools* : on [firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
